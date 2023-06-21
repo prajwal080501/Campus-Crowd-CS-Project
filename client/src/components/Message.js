@@ -42,6 +42,22 @@ const Message = (props) => {
         }}
       >
         {message.content}
+        {username && (
+          <Avatar
+            sx={{
+              width: "20px",
+              height: "20px",
+              position: "absolute",
+              bottom: "-10px",
+              right: "-10px",
+              border: "1px solid",
+              borderColor: styles.messageColor,
+            }}
+          >
+            {username}
+          </Avatar>
+        )
+            }
       </Card>
     </HorizontalStack>
   );

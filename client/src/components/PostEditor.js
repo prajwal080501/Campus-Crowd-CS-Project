@@ -2,6 +2,8 @@ import {
   Button,
   Card,
   Link,
+  MenuItem,
+  Select,
   Stack,
   TextField,
   Typography,
@@ -94,6 +96,17 @@ const PostEditor = () => {
             helperText={errors.content}
             required
           />
+          {/* category field */}
+          <Select fullWidth label="Category" name="category" margin="normal">
+            <MenuItem value="general">General</MenuItem>
+            <MenuItem value="technology">Technology</MenuItem>
+            <MenuItem value="politics">Politics</MenuItem>
+            <MenuItem value="sports">Sports</MenuItem>
+            <MenuItem value="entertainment">Entertainment</MenuItem>
+            <MenuItem value="science">Science</MenuItem>
+            <MenuItem value="health">Health</MenuItem>
+            </Select>
+
           <ErrorAlert error={serverError} />
           <Button
             variant="outlined"
